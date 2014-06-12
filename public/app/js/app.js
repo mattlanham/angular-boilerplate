@@ -3,6 +3,14 @@ angular.module('controllers', []);
 angular.module('models', []);
 angular.module('directives', []);
 
+var apiURL = '';
+
+if (window.location.host.indexOf('.com') !== -1) {
+    apiURL = 'http://localhost:3000';
+} else {
+    apiURL = 'http://someserver.com';
+}
+
 myApp.config(function($stateProvider){
 
     $stateProvider
