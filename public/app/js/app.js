@@ -11,20 +11,22 @@ if (window.location.host.indexOf('.com') !== -1) {
     apiURL = 'http://someserver.com';
 }
 
-myApp.config(function($stateProvider){
+myApp.config(['$stateProvider', function($stateProvider){
 
     $stateProvider
         .state('home', {
             url         : "",
-            templateUrl : "/views/home.html",
+            templateUrl : "/app/views/home.html",
             controller  : 'HomeController'
         })
         .state('something', {
             url         : "/something",
-            templateUrl : "/views/somthing.html",
+            templateUrl : "/app/views/something.html",
             controller  : 'SomethingController'
         });
 
-});
+}]);
 
-angular.module("myApp").run(function () {});
+angular.module("myApp").run(function () {
+
+});

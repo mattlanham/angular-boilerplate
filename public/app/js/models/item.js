@@ -2,7 +2,7 @@
     'use strict';
 
     angular.module('models')
-        .factory('ItemModel', function($q, $http) {
+        .factory('ItemModel', ['$q', '$http', function($q, $http) {
 
             var methods = {
                 all: function() {
@@ -73,5 +73,5 @@
             };
 
             return methods;
-        });
+        }]);
 })();
